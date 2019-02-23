@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
+file1 = open("C:/Users/Manjushree M H/Desktop/project/implementation/final(part-1)/helloworld.txt","r")
+aaa=''.join(file1.readlines())
+print(aaa)
+wordcloud = WordCloud(stopwords=STOPWORDS,
+                          background_color='white',
+                          width=1200,
+                          height=1000
+                        ).generate(aaa)
+
+
+plt.imshow(wordcloud)
+plt.axis('off')
+plt.show()
+
